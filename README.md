@@ -1,3 +1,38 @@
+🏛️ **Contract Structure:**
+- The contract is named "Complaint."
+- It includes state variables for the officer's address, owner's address, and counters for IDs and various lists.
+- The constructor initializes the owner and officer addresses and sets the initial ID.
+  
+🔒 **Modifiers:**
+- `onlyOfficer`: Restricts certain functions to be callable only by the assigned officer.
+- `onlyOwner`: Restricts certain functions to be callable only by the contract owner.
+
+📜 **Event:**
+- `complaintFiled`: Triggered when a new complaint is filed, emitting the ID, complainant's address, and title.
+
+🗂️ **Struct:**
+- `complaint`: Contains details about a complaint, including ID, complainant's address, title, description, approval and resolution remarks, approval and resolution status, and existence status.
+
+🔍 **Mappings:**
+- `Complaints`: Maps complaint IDs to their respective complaint details.
+
+🔓 **Functions:**
+- `fileComplaint`: Allows users to file a new complaint, emitting an event.
+- `approveComplaint`: Allows the officer to approve a complaint, updating approval status and remarks.
+- `declineComplaint`: Allows the officer to decline a complaint, updating approval status and remarks.
+- `resolveComplaint`: Allows the officer to mark a complaint as resolved, updating resolution status and remarks.
+- `calcPendingApprovals`: Calculates and updates the list of pending approvals.
+- `calcpendingResolutions`: Calculates and updates the list of pending resolutions.
+- `calcResolvedIds`: Calculates and updates the list of resolved complaints.
+- `setOfficerAddress`: Allows the contract owner to update the officer's address.
+
+🌐 **Solidity Version:**
+- The contract is written in Solidity version ^0.8.17.
+
+Overall, it's a well-structured smart contract for handling complaints, with features for filing, approval, decline, and resolution of complaints, along with functions to calculate and update various lists based on the status of complaints.
+
+
+
 ## Getting Started
 
 Create a project using this example:
